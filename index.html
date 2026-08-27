@@ -1,1 +1,64 @@
-testt
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5dfe4">
+  <title>buat isoh.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <section class="opening-screen" id="opening-screen" aria-labelledby="opening-title">
+      <div class="opening-content">
+        <p class="eyebrow">a little something</p>
+        <button class="button button-primary" id="open-button" type="button">klik</button>
+      </div>
+    </section>
+
+    <main class="birthday-page" id="birthday-page" aria-labelledby="birthday-title" hidden>
+      <div class="birthday-card">
+        <header class="card-header">
+          <p class="eyebrow">today is your day</p>
+          <h2 id="birthday-title">Happy birthday, isoh.</h2>
+          <p class="age-label">17 tahun, akhirnya.</p>
+        </header>
+
+        <div class="message">
+          <p>Semoga di umur yang baru ini banyak hal baik yang datang, dan semua yang lagi kamu usahain bisa pelan-pelan tercapai.</p>
+          <p>Semoga tetap sehat, tetap jadi diri sendiri, dan punya cukup waktu buat menikmati hal-hal kecil yang bikin hari terasa lebih menyenangkan. Jangan lupa, ada orang yang selalu senang melihat kamu baik-baik saja.</p>
+          <p>Yaudah, intinya selamat ulang tahun. Semoga tahun ini lebih ringan, lebih seru, dan punya banyak cerita baik buat diceritain nanti.</p>
+        </div>
+
+        <div class="photo-grid" aria-label="Tiga foto untuk isoh">
+          <figure class="photo photo-main">
+            <img src="./images/foto1.jpg" alt="Foto isoh" loading="eager">
+          </figure>
+          <figure class="photo">
+            <img src="./images/foto2.jpg" alt="Kenangan bersama isoh" loading="lazy">
+          </figure>
+          <figure class="photo">
+            <img src="./images/foto3.jpg" alt="Momen isoh" loading="lazy">
+          </figure>
+        </div>
+
+        <p class="closing">selamat bertumbuh, isoh :)</p>
+      </div>
+    </main>
+
+    <div class="music-control" id="music-control" hidden>
+      <button class="music-button" id="music-button" type="button" aria-label="Putar musik" aria-pressed="false">
+        <span class="music-icon" aria-hidden="true">♪</span>
+        <span id="music-label">musik</span>
+      </button>
+      <audio id="birthday-song" preload="auto">
+        <source src="./music/lagu.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
