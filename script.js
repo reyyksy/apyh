@@ -7,6 +7,9 @@ const musicLabel = document.getElementById("music-label");
 const birthdaySong = document.getElementById("birthday-song");
 const photoGrid = document.querySelector(".photo-grid");
 const photos = document.querySelectorAll(".photo img");
+const body = document.body;
+
+body.classList.add("opening-active");
 
 function updateMusicControl(isPlaying) {
   musicLabel.textContent = isPlaying ? "pause" : "musik";
@@ -25,6 +28,13 @@ function playBirthdaySong() {
 }
 
 function showBirthdayPage() {
+  if (openingScreen.hidden) {
+    return;
+  }
+
+  openButton.disabled = true;
+  window.scrollTo(0, 0);
+  body.classList.remove("opening-active");
   openingScreen.classList.add("is-closing");
 
   window.setTimeout(() => {
@@ -32,6 +42,7 @@ function showBirthdayPage() {
     birthdayPage.hidden = false;
     birthdayPage.classList.add("is-visible");
     musicControl.hidden = false;
+    window.scrollTo(0, 0);
     playBirthdaySong();
   }, 450);
 }
